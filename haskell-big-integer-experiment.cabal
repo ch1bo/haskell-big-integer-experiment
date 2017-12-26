@@ -1,0 +1,116 @@
+name:                haskell-big-integer-experiment
+version:             0.1.0
+license:             BSD2
+license-file:        LICENSE
+author:              Erik de Castro Lopo
+maintainer:          sebastian.nagel@ncoding.at
+build-type:          Simple
+extra-source-files:  Readme.md
+cabal-version:       >=1.10
+
+test-suite check-integer
+  type: exitcode-stdio-1.0
+  main-is: check-integer.hs
+  default-language: Haskell2010
+  default-extensions: MagicHash
+                    , CPP
+                    , UnboxedTuples
+                    , UnliftedFFITypes
+  build-depends: base
+               , ghc-prim
+               , primitive
+               , hspec
+               , hspec-expectations
+               , HUnit
+               , random
+               , QuickCheck
+  other-modules: Check.Common
+               , Check.Existing
+               , Check.Helpers
+               , Check.New1
+               , Check.New2
+               , Check.New3
+               , Check.New4
+               , Common.GHC.Integer.Debug
+               , Common.GHC.Integer.Loop
+               , Common.GHC.Integer.Prim
+               , Common.GHC.Integer.StrictPrim
+               , Common.GHC.Integer.WordArray
+               , GMP.GHC.Integer
+               , GMP.GHC.Integer.GMP.Internals
+               , GMP.GHC.Integer.Logarithms
+               , GMP.GHC.Integer.Logarithms.Internals
+               , GMP.GHC.Integer.Type
+               , GMP.Integer
+               , New1.GHC.Integer
+               , New1.GHC.Integer.Sign
+               , New1.GHC.Integer.Type
+               , New1.Integer
+               , New2.GHC.Integer
+               , New2.GHC.Integer.Sign
+               , New2.GHC.Integer.Type
+               , New2.Integer
+               , New3.GHC.Integer
+               , New3.GHC.Integer.Internals
+               , New3.GHC.Integer.Natural
+               , New3.GHC.Integer.Natural.Divide
+               , New3.GHC.Integer.Natural.Multiply
+               , New3.GHC.Integer.Sign
+               , New3.GHC.Integer.Type
+               , New3.Integer
+               , New4.GHC.Integer
+               , New4.GHC.Integer.Internals
+               , New4.GHC.Integer.Natural
+               , New4.GHC.Integer.Sign
+               , New4.GHC.Integer.Type
+               , New4.Integer
+               , Simple.Integer
+               , Simple.GHC.Integer
+               , Simple.GHC.Integer.Logarithms
+               , Simple.GHC.Integer.Logarithms.Internals
+               , Simple.GHC.Integer.Simple.Internals
+               , Simple.GHC.Integer.Type
+               
+benchmark bench-integer
+  type: exitcode-stdio-1.0
+  main-is: bench-integer.hs
+  default-language: Haskell2010
+  default-extensions: MagicHash
+                    , CPP
+                    , UnboxedTuples
+                    , UnliftedFFITypes
+  build-depends: base
+               , criterion
+               , ghc-prim
+               , primitive
+               , random
+  other-modules: Check.Bench1
+               , Check.Bench2
+               , Check.Bench3
+               , Check.Bench4
+               , Check.BenchG
+               , Common.GHC.Integer.Debug
+               , Common.GHC.Integer.Loop
+               , Common.GHC.Integer.Prim
+               , Common.GHC.Integer.StrictPrim
+               , Common.GHC.Integer.WordArray
+               , GMP.GHC.Integer
+               , GMP.GHC.Integer.Type
+               , New1.GHC.Integer
+               , New1.GHC.Integer.Sign
+               , New1.GHC.Integer.Type
+               , New2.GHC.Integer
+               , New2.GHC.Integer.Sign
+               , New2.GHC.Integer.Type
+               , New3.GHC.Integer
+               , New3.GHC.Integer.Internals
+               , New3.GHC.Integer.Natural
+               , New3.GHC.Integer.Natural.Divide
+               , New3.GHC.Integer.Natural.Multiply
+               , New3.GHC.Integer.Sign
+               , New3.GHC.Integer.Type
+               , New4.GHC.Integer
+               , New4.GHC.Integer.Internals
+               , New4.GHC.Integer.Natural
+               , New4.GHC.Integer.Sign
+               , New4.GHC.Integer.Type

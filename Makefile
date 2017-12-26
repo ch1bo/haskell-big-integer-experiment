@@ -154,3 +154,5 @@ sandbox-reinit:
 	@if test -d .cabal-sandbox ; then cabal sandbox delete ; fi
 	cabal sandbox init
 	cabal install criterion hspec primitive
+
+prepare: $(checkfiles) $(bench_hsfiles)
