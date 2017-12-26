@@ -3,8 +3,6 @@ TARGETS = check-integer bench-integer
 GHC = cabal exec -- ghc
 GHCFLAGS = -Wall -Werror -fwarn-tabs -funbox-strict-fields -fPIC -O3 $(PRAGMAS)
 
-ghc_major_version := $(shell ghc --numeric-version | sed 's/\..*//')
-
 hsdirs = Common/ Check/ GMP/ New*/ Simple/
 
 hsfiles := $(shell find $(hsdirs) -name \*.hs -o -name \*.lhs) *.hs $(checkfiles)
@@ -82,7 +80,7 @@ Check/New4.hs : Check/NewX.template.hs
 
 
 Check/BenchG.hs : Check/BenchX.template.hs
-	sed "s/BenchX/BenchG/;s/NewX.GHC/GMP.GHC$(ghc_major_version)/" $+ > $@
+	sed "s/BenchX/BenchG/;s/NewX.GHC/GMP.GHC/" $+ > $@
 
 Check/Bench1.hs : Check/BenchX.template.hs
 	sed "s/BenchX/Bench1/;s/NewX/New1/" $+ > $@
