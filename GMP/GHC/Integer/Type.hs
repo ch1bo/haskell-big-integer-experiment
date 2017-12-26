@@ -22,7 +22,7 @@
 -- GHC needs this module to be named "GHC.Integer.Type" and provide
 -- all the low-level 'Integer' operations.
 
-module GMP.GHC8.Integer.Type where
+module GMP.GHC.Integer.Type where
 
 #include "MachDeps.h"
 

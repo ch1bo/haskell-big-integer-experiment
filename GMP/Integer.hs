@@ -9,7 +9,7 @@ module GMP.Integer
     ( module GMPX
     ) where
 
-import GMP.GHC8.Integer as GMPX
+import GMP.GHC.Integer as GMPX
 
 import GHC.Base
 

@@ -5,7 +5,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE BangPatterns #-}
 
-module GHC.Integer.Logarithms
+module GMP.GHC.Integer.Logarithms
     ( wordLog2#
     , integerLog2#
     , integerLogBase#
@@ -21,7 +21,7 @@ module GHC.Integer.Logarithms
 # error unsupported WORD_SIZE_IN_BITS
 #endif
 
-import GHC.Integer.Type
+import GMP.GHC.Integer.Type
 
 import GHC.Prim
 

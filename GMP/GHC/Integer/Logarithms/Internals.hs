@@ -25,15 +25,15 @@
 --
 -- See https://ghc.haskell.org/trac/ghc/ticket/5122
 -- for the origin of the code in this module
-module GHC.Integer.Logarithms.Internals
+module GMP.GHC.Integer.Logarithms.Internals
     ( wordLog2#
     , integerLog2IsPowerOf2#
     , integerLog2#
     , roundingMode#
     ) where
 
-import GHC.Integer.Type
-import GHC.Integer.Logarithms
+import GMP.GHC.Integer.Type
+import GMP.GHC.Integer.Logarithms
 
 import GHC.Types
 import GHC.Prim

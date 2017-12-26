@@ -31,14 +31,14 @@
 -- See also
 -- <https://ghc.haskell.org/trac/ghc/wiki/Commentary/Libraries/Integer GHC Commentary: Libraries/Integer>.
 
-module GHC.Integer.GMP.Internals
+module GMP.GHC.Integer.GMP.Internals
     ( -- * The 'Integer' type
       Integer(..)
     , isValidInteger#
 
       -- ** Basic 'Integer' operations
 
-    , module GHC.Integer
+    , module GMP.GHC.Integer
 
       -- ** Additional 'Integer' operations
     , bitInteger
@@ -163,8 +163,8 @@ module GHC.Integer.GMP.Internals
     , importIntegerFromByteArray
     ) where
 
-import GHC.Integer.Type
-import GHC.Integer
+import GMP.GHC.Integer.Type
+import GMP.GHC.Integer
 import GHC.Prim
 import GHC.Types
 
